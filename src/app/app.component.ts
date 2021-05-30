@@ -14,4 +14,14 @@ export class AppComponent {
     const value = event.target.value;
     this.enteredText = value;
   }
+  
+  compare(randomText: string, enteredText: string){
+    
+    if(!enteredText){
+      return 'pending';
+    }
+    
+    return enteredText === randomText ? 'correct' : 'incorrect';
+    
+  }
 }
